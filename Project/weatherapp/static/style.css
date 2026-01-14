@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    font-family: Arial;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
