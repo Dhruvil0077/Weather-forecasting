@@ -1,14 +1,14 @@
-#create a web server, redner_templates load the HTML  files
+#create a web server, rendner_templates load the HTML files
 from flask import Flask, render_template, request
 
-#to send the http request to ecternal websites(weather API)
+#to send the http request to external websites(weather API)
 import requests
 
 app = Flask(__name__)
 
 API_KEY = "ffae8c6bca87b8198905d2086a7db4f3"
 
-#GET: lading the page and POST: submitting the city name
+#GET: loading the page and POST: submitting the city name
 @app.route("/", methods=["GET", "POST"])
 def index():
     weather = None
@@ -44,4 +44,5 @@ def index():
 #Starts the server. debug=True makes it restart automatically if you change the code
 if __name__ == "__main__":
     app.run(debug=True)
+
 
