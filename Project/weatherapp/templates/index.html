@@ -9,15 +9,22 @@
 <div class="card">
     <h1>Weather App 🌦️</h1>
 
+
+    <!-- create a input area when submitted, it send the data back-->
     <form method="POST">
         <input type="text" name="city" placeholder="Enter city name" required>
         <button type="submit">Get Weather</button>
     </form>
 
+    <!-- this is jinja2 syntax. it tells html only show data when we actually have weather data -->
     {% if weather %}
+
+        <!-- if city not found this displayed error -->
         {% if weather.error %}
             <p class="error">{{ weather.error }}</p>
         {% else %}
+
+            <!-- These double curly braces act as placeholders that get replaced by the actual data (like "London" or "25°C") from Python.-->
             <div class="result">
                 <h2>{{ weather.city }}</h2>
                 <p>🌡️ {{ weather.temp }} °C</p>
@@ -31,3 +38,4 @@
 
 </body>
 </html>
+
